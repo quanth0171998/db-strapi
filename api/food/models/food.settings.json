@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foods",
+  "info": {
+    "name": "Food"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "UnitPrice": {
+      "type": "biginteger"
+    },
+    "Quantity": {
+      "type": "biginteger"
+    },
+    "menu_item": {
+      "via": "foods",
+      "model": "menu-items"
+    }
+  }
+}

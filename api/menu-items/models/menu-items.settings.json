@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_items",
+  "info": {
+    "name": "MenuItems",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Version": {
+      "type": "string"
+    },
+    "drinks": {
+      "collection": "drink",
+      "via": "menu_item"
+    },
+    "foods": {
+      "collection": "food",
+      "via": "menu_item"
+    }
+  }
+}

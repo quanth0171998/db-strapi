@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drinks",
+  "info": {
+    "name": "Drink"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "UnitPrice": {
+      "type": "biginteger"
+    },
+    "Quantity": {
+      "type": "biginteger"
+    },
+    "menu_item": {
+      "via": "drinks",
+      "model": "menu-items"
+    }
+  }
+}
